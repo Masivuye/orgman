@@ -14,13 +14,17 @@ public class Helper {
 
     public static String getSuffixFromClassName(Class<?> aClass) {
         String className = getClassName(aClass);
-        throw new UnsupportedOperationException("Not yet supported!");
-        /**
-         * Your implementation goes here
-         *
-         * INSTRUCTION
-         * 1. Remove line 17 [throw new UnsupportedOperationException("Not yet supported!");]
-         * 2. Get the capitalized letter(s) from the className and return it.
-         */
+        //throw new UnsupportedOperationException("Not yet supported!");
+        String upperCase = " ";
+        int i = 0;
+        while (i <className.length()) {
+            char name = className.charAt(i);
+            if(Character.isUpperCase(name))
+                upperCase +=name;
+
+            i++;
+        }
+        return generateRandomGivenSuffix(upperCase);
+
     }
 }
